@@ -1,0 +1,13 @@
+Script para criar o banco de dados do projeto:
+
+CREATE DATABASE IF NOT EXISTS db_web_loja;
+USE db_web_loja;
+
+CREATE TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(255) NOT NULL,
+    quantidade INT NOT NULL,
+    categoria VARCHAR(100) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
+);
